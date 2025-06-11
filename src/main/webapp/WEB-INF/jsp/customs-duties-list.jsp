@@ -47,8 +47,8 @@
   <p class="error">${requestScope.error}</p>
   <% } %>
 
-  <p><a href="/customs-duties/create" class="button">Add New Customs Duty</a></p>
-  <form action="/customs-duties/fetch-external" method="post" style="display: inline-block; margin-left: 10px;">
+  <p><a href="${pageContext.request.contextPath}/customs-duties/create" class="button">Add New Customs Duty</a></p>
+  <form action="${pageContext.request.contextPath}/customs-duties/fetch-external" method="post" style="display: inline-block; margin-left: 10px;">
     <button type="submit" class="button">Fetch & Store from External API</button>
   </form>
 
