@@ -5,7 +5,7 @@ package com.sks.customtariff.dto;// src/main/java/com/example/customsdutymanager
 import com.sks.customtariff.entity.CustomsDutyId;
 import lombok.*;
 
-import java.util.Date; // Using java.util.Date for JSP compatibility
+        import java.util.Date; // Using java.util.Date for JSP compatibility
 
 @Data
 @NoArgsConstructor

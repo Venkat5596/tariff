@@ -74,7 +74,22 @@
           <td>${duty.id.tariffItemNumber}</td>
           <td>${duty.id.tariffTreatmentCode}</td>
           <td><fmt:formatDate value="${duty.asOfDateForDisplay}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
-          <td>${duty.title}</td>
+
+          <td>
+<%--            customsDuties(--%>
+<%--            TariffItemNumber='${duty.id.tariffItemNumber}',--%>
+<%--            TariffTreatmentCode='${duty.id.tariffTreatmentCode}',--%>
+<%--            AsOfDate=datetime'<fmt:formatDate value="${duty.asOfDateForDisplay}" pattern="yyyy-MM-dd'T'HH:mm:ss" />')--%>
+
+            <table style="margin-top:10px; border:1px solid #ccc; font-size: 0.9em;">
+              <tr><th>Breakdown</th><th>Value</th></tr>
+              <tr><td>Tariff Item</td><td>${duty.id.tariffItemNumber}</td></tr>
+              <tr><td>Duty Code</td><td>${duty.id.tariffTreatmentCode}</td></tr>
+              <tr><td>As of</td>
+                <td><fmt:formatDate value="${duty.asOfDateForDisplay}" pattern="yyyy-MM-dd'T'HH:mm:ss" /></td>
+              </tr>
+            </table>
+          </td>
           <td><fmt:formatDate value="${duty.updated}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
           <td class="actions">
               <%-- Edit Link (You'd need a /edit/{id} endpoint and form) --%>
